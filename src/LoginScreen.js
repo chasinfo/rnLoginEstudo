@@ -3,9 +3,7 @@ import { View, Text, StyleSheet, Image, TextInput, Button } from 'react-native';
 
 export default class LoginScreen extends Component
 {
-  static navigationOptions = {
-
-  }
+  static navigationOptions = {}
   
   constructor(props)
   {
