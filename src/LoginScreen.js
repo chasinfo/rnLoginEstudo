@@ -19,12 +19,13 @@ export default class LoginScreen extends Component
   {
     let email    = this.state.email;
     let password = this.state.password;
-    let mensagem = "Autenticação não foi aceita\nemail: "+this.state.email+"\npassword: "+this.state.password;
 
-    if (email =='teste@ceub.com.br' && password == 'ceub123') {
-      let mensagem = "Autenticação aceita\nemail: "+this.state.email+"\npassword: "+this.state.password;      
-    } 
-    alert(mensagem);
+    if (email.trim() == 'chasinfo@gmail.com' && password.trim() == '123456') {
+      this.props.navigation.navigate('lista');
+    } else {
+      let mensagem = "Autenticação não foi aceita\nemail: "+email+"\npassword: "+password;
+      alert(mensagem);
+    }
   }
 
   render()
@@ -36,7 +37,7 @@ export default class LoginScreen extends Component
             <Image source={require('../assets/business.png')} style={Styles.imagemLogin} />            
         </View>                
         <View style={Styles.areaCampos}>
-          <Text style={Styles.tituloLogin}>Sistema Estudo CEUB</Text>
+          <Text style={Styles.tituloLogin}>Receitas Caseiras</Text>
           <Text style={Styles.subTituloLogin}>Informe o Usuário, a Senha e selecione Iniciar para ter acesso ao sistema.</Text>
           <TextInput 
             placeholder='Informe o e-mail' 
@@ -82,7 +83,7 @@ const Styles = StyleSheet.create({
     borderRadius: 50    
   },
   areaCampos: {    
-    height: 300,
+    height: 250,
     margin: 15
   }, 
   tituloLogin: {

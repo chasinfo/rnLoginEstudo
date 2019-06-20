@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import loginScreen from './src/LoginScreen';
-import mainScreen from './src/MainScreen';
+import lista from './src/Lista';
+import receita from './src/Receita';
 
 const MainNavigator = createStackNavigator({
   login: { screen: loginScreen },
-  main: { screen: mainScreen }
+  lista: { screen: lista },
+  receita: {screen: receita }
 },
 {
   headerMode: 'none',
